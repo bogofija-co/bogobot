@@ -189,9 +189,18 @@ export default function App() {
             </button>
           </div>
 
-          <div className="text-center sm:text-right text-[11px] text-zinc-500">
-            <p>BogoBot AI Powered by Gemini 3.6 Flash</p>
-            <p className="mt-0.5">Sin frenos, pura cadena y corazón. 💛🖤</p>
+          <div className="text-center sm:text-right text-[11px] text-zinc-500 space-y-1">
+            <a
+              href="https://wa.me/573118113811"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-3 py-1 rounded-full text-xs font-bold hover:bg-emerald-500/20 transition-all"
+            >
+              <MessageSquare className="w-3.5 h-3.5 fill-emerald-400/20" />
+              <span>WhatsApp: 311 811 3811</span>
+            </a>
+            <p className="text-zinc-400 font-mono">BogoBot AI • BOGOFIJA Bogotá 🇨🇴</p>
+            <p className="mt-0.5 text-zinc-500">Sin frenos, pura cadena y corazón. 💛🖤</p>
           </div>
         </div>
       </footer>

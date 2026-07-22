@@ -111,7 +111,7 @@ export function calculateFrameSize(inseamCm: number): FrameSizeRecommendation {
 
 // Generate WhatsApp order URL
 export function generateWhatsAppLink(cartText: string): string {
-  const phone = '573000000000'; // Bogofija official hotline placeholder or direct link
+  const phone = '573118113811'; // Bogofija official hotline 3118113811
   const encoded = encodeURIComponent(`¡Hola BOGOFIJA! 🚴‍♂️ Vengo desde BogoBot AI con la siguiente consulta/pedido:\n\n${cartText}`);
   return `https://wa.me/${phone}?text=${encoded}`;
 }
