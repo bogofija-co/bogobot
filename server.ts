@@ -1,14 +1,10 @@
 import express from 'express';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI } from '@google/genai';
 import dotenv from 'dotenv';
 
 dotenv.config();
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const BOGOBOT_SYSTEM_INSTRUCTION = `Eres "BogoBot AI", el copiloto digital experto, mecánico de pista y asistente oficial de BOGOFIJA (Comunidad y Tienda Oficial de Piñón Fijo en Bogotá, Colombia). Tu tono es apasionado, urbano, técnico, parche, muy bogotano y respetuoso pero cercano. Usas terminología del ciclismo de pista y piñón fijo (ratio, desarrollo, skid patches, traba, cadencia, relación, entrepierna, muros, coronar, piñón, plato, trabar, parchar, coronar la cima).
 
