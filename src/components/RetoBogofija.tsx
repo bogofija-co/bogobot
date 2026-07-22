@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Flame, Trophy, Calendar, MapPin, ShieldCheck, CheckCircle2, UserCheck, Bot, Sparkles } from 'lucide-react';
+import { Flame, Trophy, Calendar, MapPin, ShieldCheck, CheckCircle2, UserCheck, Bot, Sparkles, Clock } from 'lucide-react';
+import { CountdownTimer } from './CountdownTimer';
 
 interface RetoBogofijaProps {
   onAskBogoBot: (prompt: string) => void;
@@ -23,7 +24,7 @@ export const RetoBogofija: React.FC<RetoBogofijaProps> = ({ onAskBogoBot }) => {
       <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-yellow-500 via-amber-500 to-yellow-600 p-8 sm:p-12 text-zinc-950 shadow-2xl">
         <div className="absolute top-0 right-0 w-96 h-96 bg-black/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
 
-        <div className="relative z-10 max-w-2xl space-y-4">
+        <div className="relative z-10 max-w-3xl space-y-5">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-950 text-yellow-400 text-xs font-black uppercase tracking-widest shadow-md">
             <Flame className="w-4 h-4 fill-yellow-400 animate-pulse" />
             EL EVENTO DEFINITIVO DE PIÑÓN FIJO
@@ -34,13 +35,13 @@ export const RetoBogofija: React.FC<RetoBogofijaProps> = ({ onAskBogoBot }) => {
           </h2>
 
           <p className="text-zinc-950 font-bold text-sm sm:text-base leading-relaxed opacity-90">
-            Los cerros orientales de Bogotá te esperan. Medirás tu resistencia, cadencia y coraje en un recorrido mítico de montaña por los puertos emblemáticos de la capital.
+            Los cerros orientales de Bogotá te esperan el <strong className="underline">14 de Febrero de 2027</strong>. Medirás tu resistencia, cadencia y coraje en un recorrido mítico de montaña por los puertos emblemáticos de la capital.
           </p>
 
-          <div className="flex flex-wrap gap-4 pt-2 text-xs sm:text-sm font-black font-mono">
-            <div className="bg-zinc-950 text-white px-4 py-2 rounded-xl flex items-center gap-2 border border-zinc-900">
+          <div className="flex flex-wrap gap-3 pt-1 text-xs sm:text-sm font-black font-mono">
+            <div className="bg-zinc-950 text-yellow-400 px-4 py-2 rounded-xl flex items-center gap-2 border border-zinc-900 shadow-lg">
               <Calendar className="w-4 h-4 text-yellow-400" />
-              <span>MARZO 2027</span>
+              <span>14 DE FEBRERO DE 2027</span>
             </div>
             <div className="bg-zinc-950 text-white px-4 py-2 rounded-xl flex items-center gap-2 border border-zinc-900">
               <MapPin className="w-4 h-4 text-yellow-400" />
@@ -53,6 +54,9 @@ export const RetoBogofija: React.FC<RetoBogofijaProps> = ({ onAskBogoBot }) => {
           </div>
         </div>
       </div>
+
+      {/* Countdown Timer Card */}
+      <CountdownTimer targetDate="2027-02-14T06:00:00" />
 
       {/* Grid Features */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">

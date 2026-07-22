@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bot, Shield, ShoppingBag, Bike, Ruler, Mountain, Flame, MessageSquare } from 'lucide-react';
+import { CountdownTimer } from './CountdownTimer';
 
 interface HeaderProps {
   activeTab: string;
@@ -20,15 +21,18 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, cartCou
 
   return (
     <header className="sticky top-0 z-40 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800/80 shadow-2xl">
-      {/* Top Banner Alert */}
-      <div className="bg-gradient-to-r from-yellow-500 via-amber-400 to-yellow-500 text-zinc-950 px-4 py-1.5 text-xs font-bold text-center tracking-wide uppercase flex items-center justify-center gap-2 shadow-inner">
-        <Flame className="w-4 h-4 animate-pulse" />
-        <span>¡INSCRIPCIONES ABIERTAS PARA EL #RETOBOGOFIJA 2027 VOL. 3!</span>
+      {/* Top Banner Alert with Countdown */}
+      <div className="bg-gradient-to-r from-yellow-500 via-amber-400 to-yellow-500 text-zinc-950 px-3 py-1.5 text-xs font-bold text-center tracking-wide uppercase flex flex-wrap items-center justify-center gap-2 shadow-inner">
+        <div className="flex items-center gap-1.5">
+          <Flame className="w-4 h-4 animate-pulse fill-zinc-950" />
+          <span className="font-black">#RETOBOGOFIJA 2027 • 14 DE FEBRERO DE 2027:</span>
+        </div>
+        <CountdownTimer compact targetDate="2027-02-14T06:00:00" />
         <button 
           onClick={() => setActiveTab('reto')} 
-          className="underline hover:text-zinc-900 ml-2 font-black cursor-pointer"
+          className="underline hover:text-zinc-900 font-black cursor-pointer ml-1"
         >
-          MÁS INFO &rarr;
+          INSCRÍBETE AQUÍ &rarr;
         </button>
       </div>
 
