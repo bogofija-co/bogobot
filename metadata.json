@@ -1,0 +1,6 @@
+{
+  "name": "BogoBot AI - BOGOFIJA Bogotá",
+  "description": "Copiloto digital, mecánico de pista y tienda oficial BOGOFIJA para ciclistas de piñón fijo en Bogotá y Colombia. Calculadora de relaciones, skid patches, tallaje y chat inteligente.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
